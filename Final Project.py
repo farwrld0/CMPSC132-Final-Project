@@ -1,4 +1,5 @@
 import random
+
 def get_difficulty():
     """
     Ask the player to choose a difficulty level, using number 1, 2, or 3.
@@ -13,12 +14,9 @@ def get_difficulty():
         print("Input must be 1, 2, or 3, Please choose again!")
         choice = input("Please Enter Game Difficulty (1, 2, 3): ").strip()
     
-    if choice == "1":
-        return 50, 20, "Easy Mode!"
-    elif choice == "2":
-        return 100, 10, "Medium Mode!"
-    else:
-        return 200, 5, "Hard Mode!"
+    levels = {"1": (50, 20, "Easy Mode!"), "2": (100, 10, "Medium Mode!"), "3": (200, 5, "Hard Mode!")}
+    max_num, max_attempts, difficulty = levels[choice]
+    return max_num, max_attempts, difficulty
     
 def get_guess(max_num):
     """
@@ -35,7 +33,7 @@ def get_guess(max_num):
             else:
                 print(f"Input must be between 1 and {max_num}, Please choose again!")
         else:
-            print("Invalid, input, Please enter a number")
+            print("Invalid input, Please enter a number")
     return guess
 
 def get_hint(target, guess):
@@ -71,14 +69,15 @@ def play_game(stats):
     while not found and attempts < max_attempts:
         guess = get_guess(max_num)
         attempts += 1
-        hint = get_hint(target, guess)
         if guess < target:
+            hint = get_hint(target, guess)
             print(f"Too Low! {hint} ({max_attempts - attempts} attempts remain)")
         elif guess > target:
+            hint = get_hint(target, guess)
             print(f"Too High! {hint} ({max_attempts - attempts} attempts remain)")
         else:
             found = True
-            print(f"Lets gooooo! The number is {target}")
+            print(f"Congratulations! The number is {target}")
             print(f"You got it in {attempts} attempts!")
     
     if found:
@@ -101,7 +100,7 @@ def ask_replay():
     """
     Ask the player if they want to play again or not.
     """
-    choice = input("Do you want play again? Enter yes/no: ").strip().lower()
+    choice = input("Do you want to play again? Enter yes/no: ").strip().lower()
     while choice not in ["yes", "no"]:
         print("Must enter yes or no!")
         choice = input("Do you want play again? Enter yes/no: ").strip().lower()
