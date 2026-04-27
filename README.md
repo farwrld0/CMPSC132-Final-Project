@@ -11,9 +11,10 @@ download the file called "Final Project.py",
 run this command: python "Final Project.py".
 
 ## Features
-Three difficulty Modes: Easy, Medium, and Hard, 
-keeps track of wins, losses, and total games player played, 
-lets you choose to play again after each round, or not.
+- Three difficulty modes: Easy, Medium, Hard
+- Tracks wins, losses, and total games played
+- Replay option after each round
+- Provides hints based on guess accuracy
 
 ## Author
 Muyuan Chen
