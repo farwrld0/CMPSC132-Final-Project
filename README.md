@@ -1,7 +1,7 @@
 ## CMPSC 132 Final Project - Number Guessing Game
 
 ## Description:
-This is a simple number guessing game made in Python, 
+This is a simple terminal - based number guessing game made in Python, 
 the computer picks a target number, and the player tries to guess it, 
 after each guess, the game gives hints to help the player.
 
