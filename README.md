@@ -17,5 +17,5 @@ run this command: python "Final Project.py".
 - Provides hints based on guess accuracy
 
 ## Author
-Muyuan Chen
+Muyuan Chen, 
 CMPSC 132 - Spring 2026
