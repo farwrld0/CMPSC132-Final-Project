@@ -103,7 +103,7 @@ def ask_replay():
     choice = input("Do you want to play again? Enter yes/no: ").strip().lower()
     while choice not in ["yes", "no"]:
         print("Must enter yes or no!")
-        choice = input("Do you want play again? Enter yes/no: ").strip().lower()
+        choice = input("Do you want to play again? Enter yes/no: ").strip().lower()
     return choice in ["yes"]
 
 def main():
