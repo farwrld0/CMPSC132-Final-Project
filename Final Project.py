@@ -6,9 +6,9 @@ def get_difficulty():
     Return the max number of the game, max attempts and the difficulty name.
     """
     print("Choose Game Difficulty")
-    print("1. Easy Mode (1 - 50)")
-    print("2. Medium Mode (1 - 100)")
-    print("3. Hard Mode (1 - 200)")
+    print("1. Easy Mode (1 - 50), 20 attempts")
+    print("2. Medium Mode (1 - 100), 10 attempts")
+    print("3. Hard Mode (1 - 200), 5 attempts")
     choice = input("Please Enter Game Difficulty (1, 2, 3): ").strip()
     while choice not in ["1", "2", "3"]:
         print("Input must be 1, 2, or 3, Please choose again!")
